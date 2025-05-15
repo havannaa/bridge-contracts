@@ -1,0 +1,443 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "admin",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "SelectorInUse",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "SelectorRemoved",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "SelectorUnknown",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferStarted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "acceptOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "contract IRiscZeroVerifier",
+						"name": "verifier",
+						"type": "address"
+					}
+				],
+				"name": "addVerifier",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "getVerifier",
+				"outputs": [
+					{
+						"internalType": "contract IRiscZeroVerifier",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "seal",
+						"type": "bytes"
+					}
+				],
+				"name": "getVerifier",
+				"outputs": [
+					{
+						"internalType": "contract IRiscZeroVerifier",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pendingOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "removeVerifier",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"name": "verifiers",
+				"outputs": [
+					{
+						"internalType": "contract IRiscZeroVerifier",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "seal",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "imageId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "journalDigest",
+						"type": "bytes32"
+					}
+				],
+				"name": "verify",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "seal",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "claimDigest",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct Receipt",
+						"name": "receipt",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyIntegrity",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "seal",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "imageId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "journal",
+						"type": "bytes"
+					}
+				],
+				"name": "verifyWithJournal",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"acceptOwnership()": {
+					"details": "The new owner accepts the ownership transfer."
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"pendingOwner()": {
+					"details": "Returns the address of the pending owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Starts the ownership transfer of the contract to a new account. Replaces the pending transfer if there is one. Can only be called by the current owner. Setting `newOwner` to the zero address is allowed; this can be used to cancel an initiated ownership transfer."
+				},
+				"verify(bytes,bytes32,bytes32)": {
+					"details": "This method additionally ensures that the input hash is all-zeros (i.e. no committed input), the exit code is (Halted, 0), and there are no assumptions (i.e. the receipt is unconditional).",
+					"params": {
+						"imageId": "The identifier for the guest program.",
+						"journalDigest": "The SHA-256 digest of the journal bytes.",
+						"seal": "The encoded cryptographic proof (i.e. SNARK)."
+					}
+				},
+				"verifyIntegrity((bytes,bytes32))": {
+					"params": {
+						"receipt": "The receipt to be verified."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"SelectorInUse(bytes4)": [
+					{
+						"notice": "Error raised when attempting to add a verifier for a selector that is already registered."
+					}
+				],
+				"SelectorRemoved(bytes4)": [
+					{
+						"notice": "Error raised when attempting to verify a receipt with a selector that has been         removed, or attempting to add a new verifier with a selector that was previously         registered and then removed."
+					}
+				],
+				"SelectorUnknown(bytes4)": [
+					{
+						"notice": "Error raised when attempting to verify a receipt with a selector that is not         registered on this router. Generally, this indicates a version mismatch where the         prover generated a receipt with version of the zkVM that does not match any         registered version on this router contract."
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"addVerifier(bytes4,address)": {
+					"notice": "Adds a verifier to the router, such that it can receive receipt verification calls."
+				},
+				"getVerifier(bytes)": {
+					"notice": "Get the associatied verifier, reverting if the selector is unknown or removed."
+				},
+				"getVerifier(bytes4)": {
+					"notice": "Get the associatied verifier, reverting if the selector is unknown or removed."
+				},
+				"removeVerifier(bytes4)": {
+					"notice": "Removes verifier from the router, such that it can not receive verification calls.         Removing a selector sets it to the tombstone value. It can never be set to any         other value, and can never be reused for a new verifier, in order to enforce the         property that each selector maps to at most one implementation across time."
+				},
+				"verifiers(bytes4)": {
+					"notice": "Mapping from 4-byte verifier selector to verifier contracts.         Used to route receipts to verifiers that are able to check the receipt."
+				},
+				"verify(bytes,bytes32,bytes32)": {
+					"notice": "Verify that the given seal is a valid RISC Zero proof of execution with the     given image ID and journal digest. Reverts on failure."
+				},
+				"verifyIntegrity((bytes,bytes32))": {
+					"notice": "Verify that the given receipt is a valid RISC Zero receipt, ensuring the `seal` is valid a cryptographic proof of the execution with the given `claim`. Reverts on failure."
+				}
+			},
+			"notice": "Router for IRiscZeroVerifier, allowing multiple implementations to be accessible behind a single address.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/Bridge3_flattened.sol": "RiscZeroVerifierRouter"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/Bridge3_flattened.sol": {
+			"keccak256": "0xf2d1682eb47492d30290dd634a90ff5c9fdc51fd95b9d9d8661bfb0785e21029",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://23ae0a3f2ee73c20bf476d4a47ea35504a50dd4a53a538b3f97e1bfbbedf8504",
+				"dweb:/ipfs/QmccY6XpCKRYADpnyiNVyREMfAGqWS5Qt3b8TDD93Mz2Uw"
+			]
+		}
+	},
+	"version": 1
+}

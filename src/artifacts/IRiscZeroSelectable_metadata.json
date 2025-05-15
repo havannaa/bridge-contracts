@@ -1,0 +1,68 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "SELECTOR",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"SELECTOR()": {
+					"details": "The selector is taken from the hash of the verifier parameters If two      receipts have different selectors (i.e. different verifier parameters), then it can      generally be assumed that they need distinct verifier implementations. This is used as      part of the RISC Zero versioning mechanism.      A selector is not intended to be collision resistant, in that it is possible to find      two preimages that result in the same selector. This is acceptable since it's purpose      to a route a request among a set of trusted verifiers, and to make errors of sending a      receipt to a mismatching verifiers easier to debug. It is analogous to the ABI      function selectors."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"SELECTOR()": {
+					"notice": "A short key attached to the seal to select the correct verifier implementation."
+				}
+			},
+			"notice": "Selectable interface for RISC Zero verifier.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/RiscZeroGroth16Verifier_flattened.sol": "IRiscZeroSelectable"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/RiscZeroGroth16Verifier_flattened.sol": {
+			"keccak256": "0x36be16af5344eb734caee43431bff7014a3d6cd532b4745decd89f33bae3d95e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://25a4b6b847f28d4f6820709e51851210f4b30293172801e22d88f0cdfaf13578",
+				"dweb:/ipfs/QmSzVUSwUbTQaf3WaWFEsNyi6SbUPNck3yPHL4HVM78Hhp"
+			]
+		}
+	},
+	"version": 1
+}

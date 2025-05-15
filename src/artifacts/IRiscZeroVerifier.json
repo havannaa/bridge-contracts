@@ -1,0 +1,106 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"verify(bytes,bytes32,bytes32)": "ab750e75",
+			"verifyIntegrity((bytes,bytes32))": "1599ead5"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "bytes",
+					"name": "seal",
+					"type": "bytes"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "imageId",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "journalDigest",
+					"type": "bytes32"
+				}
+			],
+			"name": "verify",
+			"outputs": [],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "bytes",
+							"name": "seal",
+							"type": "bytes"
+						},
+						{
+							"internalType": "bytes32",
+							"name": "claimDigest",
+							"type": "bytes32"
+						}
+					],
+					"internalType": "struct Receipt",
+					"name": "receipt",
+					"type": "tuple"
+				}
+			],
+			"name": "verifyIntegrity",
+			"outputs": [],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

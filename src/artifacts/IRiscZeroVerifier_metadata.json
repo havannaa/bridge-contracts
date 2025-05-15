@@ -1,0 +1,116 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "seal",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "imageId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "journalDigest",
+						"type": "bytes32"
+					}
+				],
+				"name": "verify",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "seal",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "claimDigest",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct Receipt",
+						"name": "receipt",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyIntegrity",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"verify(bytes,bytes32,bytes32)": {
+					"details": "This method additionally ensures that the input hash is all-zeros (i.e. no committed input), the exit code is (Halted, 0), and there are no assumptions (i.e. the receipt is unconditional).",
+					"params": {
+						"imageId": "The identifier for the guest program.",
+						"journalDigest": "The SHA-256 digest of the journal bytes.",
+						"seal": "The encoded cryptographic proof (i.e. SNARK)."
+					}
+				},
+				"verifyIntegrity((bytes,bytes32))": {
+					"params": {
+						"receipt": "The receipt to be verified."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"verify(bytes,bytes32,bytes32)": {
+					"notice": "Verify that the given seal is a valid RISC Zero proof of execution with the     given image ID and journal digest. Reverts on failure."
+				},
+				"verifyIntegrity((bytes,bytes32))": {
+					"notice": "Verify that the given receipt is a valid RISC Zero receipt, ensuring the `seal` is valid a cryptographic proof of the execution with the given `claim`. Reverts on failure."
+				}
+			},
+			"notice": "Verifier interface for RISC Zero receipts of execution.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/RiscZeroGroth16Verifier_flattened.sol": "IRiscZeroVerifier"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/RiscZeroGroth16Verifier_flattened.sol": {
+			"keccak256": "0x36be16af5344eb734caee43431bff7014a3d6cd532b4745decd89f33bae3d95e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://25a4b6b847f28d4f6820709e51851210f4b30293172801e22d88f0cdfaf13578",
+				"dweb:/ipfs/QmSzVUSwUbTQaf3WaWFEsNyi6SbUPNck3yPHL4HVM78Hhp"
+			]
+		}
+	},
+	"version": 1
+}

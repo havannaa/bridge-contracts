@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "_pA",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[2][2]",
+						"name": "_pB",
+						"type": "uint256[2][2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "_pC",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[5]",
+						"name": "_pubSignals",
+						"type": "uint256[5]"
+					}
+				],
+				"name": "verifyProof",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/RiscZeroGroth16Verifier_flattened.sol": "Groth16Verifier"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/RiscZeroGroth16Verifier_flattened.sol": {
+			"keccak256": "0x36be16af5344eb734caee43431bff7014a3d6cd532b4745decd89f33bae3d95e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://25a4b6b847f28d4f6820709e51851210f4b30293172801e22d88f0cdfaf13578",
+				"dweb:/ipfs/QmSzVUSwUbTQaf3WaWFEsNyi6SbUPNck3yPHL4HVM78Hhp"
+			]
+		}
+	},
+	"version": 1
+}

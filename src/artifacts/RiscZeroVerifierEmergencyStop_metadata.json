@@ -1,0 +1,453 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract IRiscZeroVerifier",
+						"name": "_verifier",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "guardian",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "EnforcedPause",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ExpectedPause",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidProofOfExploit",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferStarted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "Paused",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "Unpaused",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "acceptOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "seal",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "claimDigest",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct Receipt",
+						"name": "receipt",
+						"type": "tuple"
+					}
+				],
+				"name": "estop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "estop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pendingOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "verifier",
+				"outputs": [
+					{
+						"internalType": "contract IRiscZeroVerifier",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "seal",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "imageId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "journalDigest",
+						"type": "bytes32"
+					}
+				],
+				"name": "verify",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes",
+								"name": "seal",
+								"type": "bytes"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "claimDigest",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct Receipt",
+						"name": "receipt",
+						"type": "tuple"
+					}
+				],
+				"name": "verifyIntegrity",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"EnforcedPause()": [
+					{
+						"details": "The operation failed because the contract is paused."
+					}
+				],
+				"ExpectedPause()": [
+					{
+						"details": "The operation failed because the contract is not paused."
+					}
+				],
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"events": {
+				"Paused(address)": {
+					"details": "Emitted when the pause is triggered by `account`."
+				},
+				"Unpaused(address)": {
+					"details": "Emitted when the pause is lifted by `account`."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"acceptOwnership()": {
+					"details": "The new owner accepts the ownership transfer."
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"paused()": {
+					"details": "Returns true if the contract is paused, and false otherwise."
+				},
+				"pendingOwner()": {
+					"details": "Returns the address of the pending owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Starts the ownership transfer of the contract to a new account. Replaces the pending transfer if there is one. Can only be called by the current owner. Setting `newOwner` to the zero address is allowed; this can be used to cancel an initiated ownership transfer."
+				},
+				"verify(bytes,bytes32,bytes32)": {
+					"details": "This method additionally ensures that the input hash is all-zeros (i.e. no committed input), the exit code is (Halted, 0), and there are no assumptions (i.e. the receipt is unconditional).",
+					"params": {
+						"imageId": "The identifier for the guest program.",
+						"journalDigest": "The SHA-256 digest of the journal bytes.",
+						"seal": "The encoded cryptographic proof (i.e. SNARK)."
+					}
+				},
+				"verifyIntegrity((bytes,bytes32))": {
+					"params": {
+						"receipt": "The receipt to be verified."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"InvalidProofOfExploit()": [
+					{
+						"notice": "Error raised when calling estop with a receipt that cannot be verified as proof of an exploit on the verifier contract."
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {
+				"estop((bytes,bytes32))": {
+					"notice": "Initiate an emergency stop of the verifier contract, via the \"circuit breaker\".         This method can be called by anyone who can produce a verifying proof for a receipt         claim digest of all zeroes. The existence of such a proof demonstrates a critical         vulnerability in the proof system.         When stopped, all calls to the verify and verifyIntegrity functions will revert.         Once stopped, this contract can never be restarted."
+				},
+				"estop()": {
+					"notice": "Initiate an emergency stop of the verifier contract.         Can only be used by the guardian address assigned as owner of this contract.         When stopped, all calls to the verify and verifyIntegrity functions will revert.         Once stopped, this contract can never be restarted."
+				},
+				"verify(bytes,bytes32,bytes32)": {
+					"notice": "Verify that the given seal is a valid RISC Zero proof of execution with the     given image ID and journal digest. Reverts on failure."
+				},
+				"verifyIntegrity((bytes,bytes32))": {
+					"notice": "Verify that the given receipt is a valid RISC Zero receipt, ensuring the `seal` is valid a cryptographic proof of the execution with the given `claim`. Reverts on failure."
+				}
+			},
+			"notice": "Wrapper for an IRiscZeroVerifier contract, providing emergency stop function.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/RiscZeroVerifierEmergencyStop.sol": "RiscZeroVerifierEmergencyStop"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
+				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable2Step.sol": {
+			"keccak256": "0xdcad8898fda432696597752e8ec361b87d85c82cb258115427af006dacf7128c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e2c9d517f0c136d54bd00cd57959d25681d4d6273f5bbbc263afe228303772f0",
+				"dweb:/ipfs/QmReNFjXBiufByiAAzfSQ2SM5r3qeUErn46BmN3yVRvrek"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
+			]
+		},
+		"@openzeppelin/contracts/utils/Pausable.sol": {
+			"keccak256": "0xdb484371dfbb848cb6f5d70464e9ac9b2900e4164ead76bbce4fef0b44bcc68f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f9d6f6f6600a2bec622f699081b58350873b5e63ce05464d17d674a290bb8a7c",
+				"dweb:/ipfs/QmQKVzSQY1PM3Bid4QhgVVZyx6B4Jx7XgaQzLKHj38vJz8"
+			]
+		},
+		"src/RiscZeroVerifierEmergencyStop.sol": {
+			"keccak256": "0x04f3d698d24e21ee0791243d481b9d6dab642d9722ed44b91ca9a121e8be7a4d",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://4225b5cd648f324e7dfd797ef770d8e3a8859739ec7d2da6c01de3885e6eedcf",
+				"dweb:/ipfs/QmaLXcP6a9yXp6yc8qebb7VZV1ZjavbDwGFDUUmUVze8fK"
+			]
+		},
+		"src/interfaces/IRiscZeroVerifier.sol": {
+			"keccak256": "0x282a04fa92a55f04092aa15c87ee72b87f959fcfc853ed2a89be6758d7c2c5f4",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://52c74381a5d81715ce1b780c996a0a44d893077ddc775eaf62c091599a9ac910",
+				"dweb:/ipfs/QmbDyuhPsaBDTaiQo6xN1qkeLv1fSY3PSHUQ5ogfQnVC4g"
+			]
+		},
+		"src/utils/Util.sol": {
+			"keccak256": "0xb0814d490813de58b9619123bd0c475accb564b59b558b9099762b1a075f81f7",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://4f8222693e4cd1566767add3918293a37ae32d22af34aab2f2aa4a7742c9d3c2",
+				"dweb:/ipfs/QmdtXUgB8TSo5R6fV7592EYMAZ9KpoNamvYMP78pt5nnEf"
+			]
+		}
+	},
+	"version": 1
+}
